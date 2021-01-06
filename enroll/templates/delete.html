@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+   <head>
+         <meta charset="UTF-8">
+          <title>Delete Page</title>
+   </head>
+        <body>
+            <center>
+                <br>
+                <br>
+                <h2>This process will Delete the data you've selected</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <p>Delete this record?</p>
+                            <input type="submit" value="yes">
+                            <input type="button" value="no" onclick="window.location.href='{% url 'records' %}'">
+                    </form>
+            </center>
+        </body>
+</html>
+{% endblock content%}

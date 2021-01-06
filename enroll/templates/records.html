@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>records_DB</title>
+        </head>
+        <body>
+            <center>
+                <br>
+                <br>
+                <h2>---Student Database---</h2>
+                <table cellpadding="14px" cellspacing="2" bgcolor="orange" border="2" align="center">
+                    <tr bgcolor="violet">
+                        <th>Si.no</th>
+                        <th>Student Name</th>
+                        <th>Course Detail</th>
+                        <th>Fees Details</th>
+                        <th>Session login</th>
+                        <th>Student Attendance</th>
+                        <th>Date & Time</th>
+                        <th colspan="2">Controls</th>
+                    </tr>
+                        {% for Data in object_list %}
+                            <tr align="center">
+                                <td>{{Data.id}}</td>
+                                <td>{{Data.name}}</td>
+                                <td>{{Data.course}}</td>
+                                {% if Data.amount < 15000 %}
+                                    <td bgcolor="red">{{Data.amount}}</td>
+                                {% else %}
+                                    <td>{{Data.amount}}</td>
+                                {% endif %}
+                                <td>{{Data.session}}</td>
+                                {% if 'N' in Data.attendance %}
+                                    <td bgcolor="red">{{Data.attendance}}</td>
+                                {% else %}
+                                    <td>{{Data.attendance}}</td>
+                                {% endif %}
+                                <td>{{Data.date}}</td>
+                                <td><a href="{% url 'edit' Data.pk %}"><img src="{% static 'images/edit.jpg' %}" width="18" height="18"></a></td>
+                                <td><a href=""><img src="{% static 'images/del.jpg' %}" width="20" height="20"></a></td>
+                            </tr>
+                        {% endfor %}
+                </table>
+            </center>
+        </body>
+    </html>
+{% endblock content %}
+

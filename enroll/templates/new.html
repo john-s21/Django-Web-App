@@ -1,0 +1,26 @@
+{%extends 'base.html' %}
+{% load static %}
+{% block content%}
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Registration</title>
+        </head>
+        <body class="cover">    
+            <center>
+            <br>
+            <!--<h2 id="h2h"><u>-:Student Registration:-</u></h2>-->
+                    <form method="post">
+                        {% csrf_token %}
+                        <fieldset>
+                            <legend align="center">
+                                <input class="b1" type="button" name="btn" value="Register">
+                            </legend>
+                                {{form.as_p}}
+                            <div align="center"><input type="submit" value="Register" name="i1" onclick="con()"></div>
+                        </fieldset>
+                    </form>
+            </center>
+        </body>
+    </html>
+{% endblock content%}
