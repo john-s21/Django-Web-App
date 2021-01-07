@@ -40,4 +40,4 @@ class CN(TemplateView):
 
 
 class L(TemplateView):
-    template_name = 'login.html'
+    template_name = 'log-in.html'

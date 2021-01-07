@@ -1,8 +1,9 @@
 {% load static %}
-    <html lang="en">
+<html lang="en">
         <head>
             <meta charset="UTF-8">
             <link rel="stylesheet" type="text/css" href="{% static 'CSS/main.css' %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'CSS/login.css' %}">
             <script src="https://kit.fontawesome.com/1285c02b37.js" crossorigin="anonymous"></script>
         </head>
         <body>
@@ -13,11 +14,11 @@
                     <a class="" href="{% url 'records' %}"><i class="fas fa-user-shield fa-lg" title="Admin-Login"></i></a>
                     <a class="" href=""><i class="fas fa-user-graduate fa-lg" title="Student-Login"></i></a>
                     <a class="" href="{% url 'contact' %}"><i class="fas fa-address-book fa-lg" title="Contact us info"></i></a>
-                    <a class="opp" href=""><i class="fas fa-door-open fa-lg" title="Login"></i></a>
+                    <a class="opp" href="{% url 'sign' %}"><i class="fas fa-door-open fa-lg" title="Login"></i></a>
                 </div>
             </center>
-            {%block content%}
-            {%endblock content %}
+            {% block content %}
+            {% endblock content %}
         <script src="{% static 'JS/main.js' %}"></script>
         </body>
     </html>

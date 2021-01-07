@@ -2,29 +2,25 @@
 {% load static %}
 {% block content %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Info_Us</title>
-</head>
-<body>
-<br>
-<br>
+    <head>
+        <meta charset="UTF-8">
+        <title>Info_Us</title>
+    </head>
+    <body>
+        <br>
+        <center>
+            <p id="pi"> test page</p>
+            <a class="active" href="{% url 'home' %}">Home</a>
+            <a class="" href="{% url 'new' %}">Register</a>
+            <a class="" href="{% url 'records' %}">Admin</a>
+            <a class="" href="">Student</a>
+            <a class="" href="{% url 'contact' %}">Contact us</a>
+            <a class="ui-tooltip" title="INFO! INFO!! INFO!!!">
+                <span style="...">Text that you want to show the tooltip when hovered over.
+                </span>
+            </a>
 
-<br>
-<br>
-<center>
-                    <p id="pi"> test page</p>
-                    <a class="active" href="{% url 'home' %}">Home</a>
-                    <a class="" href="{% url 'new' %}">Register</a>
-                    <a class="" href="{% url 'records' %}">Admin</a>
-                    <a class="" href="">Student</a>
-                    <a class="" href="{% url 'contact' %}">Contact us</a>
-                    <a class="ui-tooltip" title="INFO! INFO!! INFO!!!">
-                        <span style="cursor: help;">Text that you want to show the tooltip when hovered over.
-                        </span>
-                    </a>
-
-            </center>
-</body>
+        </center>
+    </body>
 </html>
 {% endblock content %}
