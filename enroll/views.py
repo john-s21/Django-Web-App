@@ -37,3 +37,7 @@ class D(DeleteView):
 
 class CN(TemplateView):
     template_name = 'contact.html'
+
+
+class L(TemplateView):
+    template_name = 'login.html'
