@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d91b19c-ae74-4c1d-a334-ea277a2e338c" name="Default Changelist" comment="login form layout added from w3school">
-      <change afterPath="$PROJECT_DIR$/enroll/migrations/0002_reg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enroll/static/images/user.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enroll/static/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/static/CSS/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/log-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/log-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enroll/templates/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

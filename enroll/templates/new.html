@@ -9,7 +9,6 @@
         <body class="cover">    
             <center>
             <br>
-            <!--<h2 id="h2h"><u>-:Student Registration:-</u></h2>-->
                     <form method="post">
                         {% csrf_token %}
                         <fieldset class="field01">
@@ -17,7 +16,9 @@
                                 <label><b>REGISTER</b></label>
                             </legend>
                                 {{form.as_p}}
-                            <input class="button bt1" type="submit" value="Register" name="i1" onclick="con()" align="center">
+                            <div class="button bt1">
+                                <button type="submit" name="i1" onclick="con()">TEST</button>
+                            </div>
                         </fieldset>
                     </form>
             </center>
