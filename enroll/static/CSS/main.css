@@ -9,24 +9,25 @@ body {
 }
 
 .button {
-        align: center;
-        padding: 8px 0 22px 0;
         height: 4%;
         width: 8%;
         color: Black;
+        align: center;
         cursor: pointer;
         border-radius: 12px;
-        background-color: white;
-        transition-duration: 0.4s;
+        text-decoration: none;
         border: 2px solid red;
-
+        background-color: white;
+        padding: 10px 8px 21px 8px;
+        transition-duration: 0.4s;
 }
 
 .button:hover {
         background-color: black;
         color: white;
-        box-shadow: 0 12px 16px 0 black,0 17px 50px 0 black;
+        box-shadow: 0 12px 16px 0 black;
 }
+
 h1 {
           color: white; text-align: center;
 }
@@ -47,7 +48,8 @@ table{
 }
 
 #hmpg-para-font {
-}           text-size: 21px;
+          text-size: 21px;
+          }
 
 .hyper {
             color: black;
