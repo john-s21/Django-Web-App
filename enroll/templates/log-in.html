@@ -7,27 +7,25 @@
         <title>User-Login</title>
     </head>
     <body>
-    <center>
-    <br>
-    <br>
-        <h2>Modal Registration Form</h2>
+        <center>
+        <br>
+        <br>
         <div class="container">
-            <form action="" method="post">
+            <form action="" method="POST">
                 {% csrf_token %}
-                <fieldset id="field01" name="fd1">
-                <label><b>First Name:</b></label>
-                    <input id="in01" type="text" name="uname" required><br><br>
-                <label><b>Last Name:</b></label>
-                    <input id="in02" type="password" name="psw" required><br><br>
-                <label><b>User Name:</b></label>
-                    <input id="in03" type="email" placeholder="enter username ex.'joy@12'" name="mail" required><br><br>
-                <label><b>Email-ID:</b></label>
-                    <input id="in04" type="text" placeholder="Enter your mail id"><br><br>
+                <fieldset id="fieldset02">
+                    <legend align="center">
+                        <label><b>REGISTER</b></label>
+                    </legend>
+                    <label><b>First Name:</b></label><input id="in01" type="text" name="uname" required><br><br>
+                    <label><b>Last Name:</b></label><input id="in02" type="text" name="psw" required><br><br>
+                    <label><b>User Name:</b></label><input id="in03" type="text" placeholder="enter username ex.'joy@12'" name="mail" required><br><br>
+                    <label><b>Email-ID:</b></label><input id="in04" type="email" placeholder="Enter your mail id"><br><br>
+                    <button class="log-btn" type="submit" onclick="con()">Login</button>
                 </fieldset>
-                <button id="log-btn" type="submit" onclick="">Login</button>
             </form>
         </div>
-    </center>
+        </center>
     </body>
 </html>
 {% endblock content %}

@@ -49,5 +49,5 @@ class Reg(models.Model):
     id = models.AutoField(auto_created=True, primary_key=True)
     f_name = models.CharField(max_length=15, null=False)
     l_name = models.CharField(max_length=15, null=False)
-    mail = models.EmailField(unique=True, null=False)
     usr_name = models.CharField(max_length=15, unique=True, null=False)
+    mail = models.EmailField(unique=True, null=False)

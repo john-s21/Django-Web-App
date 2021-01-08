@@ -8,6 +8,7 @@ body {
           text-color: yellow;
 }
 
+
 h1 {
           color: white; text-align: center;
 }
@@ -38,13 +39,14 @@ table{
 .field01{
             background-color:transparent;
             color:black;
-            width:240px;
-            height:250px;
+            height 210px;
+            width: 250px;
             border-color:black;
             margin-left: 950px;
             margin-top: 20%;
             text-align: left;
          }
+
 
 .cover {
              background: url('/static/images/reg.jpg');
@@ -93,7 +95,21 @@ table{
         float: right;
 }
 
-.container form {
+.container {
          position: absolute;
-         top: 84px;
+         margin-left: 42%;
+         margin-top: 12%;
+
 }
+
+#fieldset02 {
+        padding: 20px 9px 5px 9px;
+        background-color: transparent;
+        border-color: transparent;
+        color:black;
+        height: 190px;
+        width: 270px;
+        border-color:black;
+        text-align: left;
+}
+

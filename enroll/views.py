@@ -1,6 +1,6 @@
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
-from . models import Data
+from . models import Data, Reg
 from django.urls import reverse_lazy
 
 
