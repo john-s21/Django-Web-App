@@ -99,15 +99,15 @@ table{
 }
 
 #fieldset02 {
-        padding: 20px 9px 5px 9px;
+        padding: 20px 9px 5px 8px;
         background-color: transparent;
         border-color: transparent;
         color:black;
-        height: 190px;
+        height: 120px;
         width: 270px;
         border-color:black;
         text-align: left;
-        align-items: center;
+        align-items: right;
 }
 
 .button {

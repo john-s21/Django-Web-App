@@ -2,6 +2,7 @@ from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from . models import Data, Reg
 from django.urls import reverse_lazy
+from django.shortcuts import render
 
 
 class H(TemplateView):
@@ -39,5 +40,16 @@ class CN(TemplateView):
     template_name = 'contact.html'
 
 
-class L(TemplateView):
-    template_name = 'log-in.html'
+def log(request):
+    if request.method == 'POST':
+        post = Reg()
+        if request.POST.get('fname') and request.POST.get('lname'):
+            post.f_name = request.POST.get('fname')
+            post.l_name = request.POST.get('lname')
+            post.usr_name = request.POST.get('uname')
+            post.mail = request.POST.get('mail')
+            post.save()
+        return render(request, 'log.html')
+    else:
+        print("Please Enter valid details!!")
+        return render(request, 'log.html')
