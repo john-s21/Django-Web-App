@@ -1,0 +1,19 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Authentication</title>
+</head>
+<body>
+    <h2>Test Login</h2>
+    <form method="POST">
+        {% csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Log-In</button>
+    </form>
+</body>
+</html>
+{% endblock content%}

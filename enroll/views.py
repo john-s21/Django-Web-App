@@ -2,7 +2,7 @@ from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from . models import Data, Reg
 from django.urls import reverse_lazy
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 class H(TemplateView):
@@ -49,7 +49,7 @@ def log(request):
             post.usr_name = request.POST.get('uname')
             post.mail = request.POST.get('mail')
             post.save()
-        return render(request, 'log.html')
+        return redirect('home')
     else:
         print("Please Enter valid details!!")
         return render(request, 'log.html')

@@ -4,12 +4,12 @@ body {
         background-size: cover;
 }
 
-.h2 {
-          text-color: yellow;
+#words {
+        font-size: 8px;
 }
 
 h1 {
-          color: white; text-align: center;
+          color: black; text-align: center;
 }
 
 table{
@@ -103,7 +103,7 @@ table{
         background-color: transparent;
         border-color: transparent;
         color:black;
-        height: 120px;
+        height: 180px;
         width: 270px;
         border-color:black;
         text-align: left;
