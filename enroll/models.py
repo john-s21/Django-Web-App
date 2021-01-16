@@ -51,3 +51,6 @@ class Reg(models.Model):
     l_name = models.CharField(max_length=15, null=False, blank=False)
     usr_name = models.CharField(max_length=15, unique=True, null=False, blank=False)
     mail = models.EmailField(unique=True, null=False, blank=False)
+
+    def __str__(self):
+        return self.f_name

@@ -43,12 +43,11 @@ class CN(TemplateView):
 def log(request):
     if request.method == 'POST':
         post = Reg()
-        if request.POST.get('fname') and request.POST.get('lname'):
-            post.f_name = request.POST.get('fname')
-            post.l_name = request.POST.get('lname')
-            post.usr_name = request.POST.get('uname')
-            post.mail = request.POST.get('mail')
-            post.save()
+        post.f_name = request.POST.get('fname')
+        post.l_name = request.POST.get('lname')
+        post.usr_name = request.POST.get('uname')
+        post.mail = request.POST.get('mail')
+        post.save()
         return redirect('home')
     else:
         print("Please Enter valid details!!")
