@@ -62,10 +62,9 @@ table{
 .topnav {
             overflow: hidden;
             margin-left: -10px;
-            margin-top: -8px;
+            margin-top: -12px;
             margin-right: -8px;
             background-color: #333;
-            padding: 0;
             position: fixed;
             width: 101%;
 
@@ -75,7 +74,7 @@ table{
 .topnav a {
             float: left;
             color: #f2f2f2;
-            padding: 10px 18px;
+            padding: 14px 37px;
             text-decoration: none;
             font-size: 17px;
 }
@@ -84,7 +83,10 @@ table{
             background-color: #ddd;
             color: black;
 }
-
+.topnav a#bb:hover {
+            background-color: white;
+            color: black;
+}
 .topnav a.active {
             background-color: #4CAF50;
             color: white;
@@ -92,8 +94,9 @@ table{
 
 .topnav a.opp {
         float: right;
+        background-color: #4CAF50;
+        color: white;
 }
-
 .container {
          position: absolute;
          margin-left: 42%;
