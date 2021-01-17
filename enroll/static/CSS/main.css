@@ -6,6 +6,7 @@ body {
 
 #words {
         margin-left: 31%;
+        margin-top: -19%;
         text-align: left;
         size: 35%;
 }
@@ -19,11 +20,30 @@ table{
 
 }
 
-#q  {
-        margin-left: 25;
+#img01  {
+        margin-top: 2%;
+        margin-left: 25%;
         width:520px; height:230px;
         text-decoration: none;
         color: white;
+}
+
+#img03 {
+        display: inline;
+        margin-top: -19%;
+        margin-left: -72%;
+        width: 360px;
+        height: 500px;
+        box-shadow: 3px 9px 6px 6px #4CAF50;
+
+}
+
+.img02 {
+        position: fixed;
+        height: 24px;
+        width: 25px;
+        margin-left: 92.3%;
+        margin-top: -0.20%;
 }
 
 .hyper:hover {
@@ -68,7 +88,6 @@ table{
             position: fixed;
             width: 101%;
 
-
 }
 
 .topnav a {
@@ -87,6 +106,7 @@ table{
             background-color: white;
             color: black;
 }
+
 .topnav a.active {
             background-color: #4CAF50;
             color: white;
