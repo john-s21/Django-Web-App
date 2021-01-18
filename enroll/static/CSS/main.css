@@ -6,9 +6,9 @@ body {
 
 #words {
         margin-left: 31%;
-        margin-top: -19%;
+        margin-top: -17%;
         text-align: left;
-        size: 35%;
+        size: 40%;
 }
 
 h1 {
@@ -21,7 +21,7 @@ table{
 }
 
 #img01  {
-        margin-top: 2%;
+        margin-top: 1%;
         margin-left: 25%;
         width:520px; height:230px;
         text-decoration: none;
@@ -139,7 +139,7 @@ table{
 .button {
         color: Black;
         cursor: pointer;
-        border-radius: 12px;
+        border-radius: 0px;
         text-decoration: none;
         border: none;
         background-color: white;
