@@ -5,10 +5,15 @@ body {
 }
 
 #words {
+        border: 1px transparent;
+        border-radius: 54px;
+        padding: 5px 0px 5px 40px;
         margin-left: 31%;
-        margin-top: -17%;
+        margin-top: -19%;
         text-align: left;
         size: 40%;
+        background-color: transparent;
+        box-shadow: 0px 0px 22px 10px #4CAF50 inset;
 }
 
 h1 {
@@ -28,16 +33,6 @@ table{
         color: white;
 }
 
-#img03 {
-        display: inline;
-        margin-top: -19%;
-        margin-left: -72%;
-        width: 360px;
-        height: 500px;
-        box-shadow: 3px 9px 6px 6px #4CAF50;
-
-}
-
 .img02 {
         position: fixed;
         height: 24px;
@@ -45,6 +40,17 @@ table{
         margin-left: 92.3%;
         margin-top: -0.20%;
 }
+
+#img03 {
+        display: inline;
+        margin-top: -18.5%;
+        margin-left: -72%;
+        width: 360px;
+        height: 500px;
+        box-shadow: 0px 0px 6px 6px #4CAF50;
+}
+
+
 
 .hyper:hover {
                  color: red;
