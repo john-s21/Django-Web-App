@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d91b19c-ae74-4c1d-a334-ea277a2e338c" name="Default Changelist" comment="login form layout added from w3school">
-      <change afterPath="$PROJECT_DIR$/enroll/static/images/bgr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enroll/static/images/kaeya.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enroll/static/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/static/CSS/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/static/images/success.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/static/JS/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/static/JS/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enroll/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enroll/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/templates/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/log.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

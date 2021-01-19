@@ -1,2 +1,4 @@
 function con()
-    {alert("Registration successful!");}
+    {
+    document.getElementById("body_login").style.filter: blur(4px);
+    }
