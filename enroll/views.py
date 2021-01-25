@@ -1,5 +1,6 @@
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
+"""from django.contrib.auth.models import auth"""
 from . models import Data, Reg
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect
@@ -43,12 +44,23 @@ class CN(TemplateView):
 def log(request):
     if request.method == 'POST':
         post = Reg()
-        post.f_name = request.POST.get('fname')
-        post.l_name = request.POST.get('lname')
         post.usr_name = request.POST.get('uname')
+        post.pwd = request.POST.get('pwd')
         post.mail = request.POST.get('mail')
         post.save()
+        print("------Data are stored------")
         return redirect('home')
     else:
-        print("Please Enter valid details!!")
+        print("------NO DATA ENTERED------")
         return render(request, 'log.html')
+
+
+"""def reg(request):
+    if request.method == 'POST':
+        post = Reg()
+        post.usr_name = request.POST.get('uname')
+        post.pwd = request.POST.get('pwd')
+        if auth.authenticate(usr_name='uname', pwd='pwd'):
+            pass
+    else:
+        pass"""

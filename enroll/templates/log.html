@@ -11,17 +11,15 @@
         <br>
         <br>
         <div class="container">
-            <form method="POST" name="form-1" autocomplete="off">
+            <form method="POST" autocomplete="off">
                 {% csrf_token %}
                 <fieldset id="fieldset02">
-                    <label><b>First Name </b></label>
-                    <input id="in01" type="text" name="fname" required onmouseenter=don()"><br><br>
-                    <label><b>Last Name </b></label>
-                    <input id="in02" type="text" name="lname" required><br><br>
                     <label><b>User Name </b></label>
-                    <input id="in03" type="text" placeholder="enter username ex.'joy@12'" name="uname" required><br><br>
+                        <input id="in 01" type="text" placeholder="enter username ex.'joy@12'" name="uname" required><br><br>
+                    <label><b>Password </b></label>
+                        <input id="in 02" type="text" placeholder="enter password" name="pwd" required><br><br>
                     <label><b>Email-ID  </b></label>
-                    <input id="in04" type="email" placeholder="Enter your mail id" name="mail" required><br><br>
+                        <input id="in 03" type="email" placeholder="Enter your mail id" name="mail" required><br><br>
                     <button class="button b4" value="post" type="submit">Login</button>
                 </fieldset>
             </form>

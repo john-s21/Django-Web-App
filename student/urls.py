@@ -22,7 +22,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('enroll.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
 
 ]
 if settings.DEBUG:
