@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-
+{% if user.is_authenticated %}
     <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,5 +48,14 @@
             </center>
         </body>
     </html>
+{% else %}
+<html>
+<body onloadstart="conf()">
+<input id="usr" type="text" name="un" required onload="conf()">
+<input id="pwd" type="password" name="pd" required>
+<script type="text/javascript" src="{% static 'JS/main.js' %}"></script>
+</body>
+</html>
+{% endif %}
 {% endblock content %}
 

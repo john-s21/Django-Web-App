@@ -1,7 +1,8 @@
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
-"""from django.contrib.auth.models import auth"""
-from . models import Data, Reg
+from django.contrib.auth.models import User, auth
+from . models import Data
+from django.contrib import messages
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect
 
@@ -41,26 +42,36 @@ class CN(TemplateView):
     template_name = 'contact.html'
 
 
+# def reg(request):
+#     if request.method == 'POST':
+#         username = request.POST['uname']
+#         password = request.POST['pwd']
+#         email = request.POST['mail']
+#         user = User.objects.create_user(username=username, password=password, email=email)
+#         user.save()
+#         print("------Data are stored------")
+#         return redirect('home')
+#     else:
+#         print("------NO DATA ENTERED------")
+#         return render(request, 'login.html')
+
+
 def log(request):
     if request.method == 'POST':
-        post = Reg()
-        post.usr_name = request.POST.get('uname')
-        post.pwd = request.POST.get('pwd')
-        post.mail = request.POST.get('mail')
-        post.save()
-        print("------Data are stored------")
-        return redirect('home')
+        uname = request.POST['un']
+        pwd = request.POST['pd']
+        user = auth.authenticate(username=uname, password=pwd)
+        if user is not None:
+            auth.login(request, user)
+            print("----LOGIN SUCCESS----")
+            return redirect('home')
+        else:
+            messages.info(request, "Invalid Credentials!!")
+            return redirect('login')
     else:
-        print("------NO DATA ENTERED------")
-        return render(request, 'log.html')
+        return render(request, 'login.html')
 
 
-"""def reg(request):
-    if request.method == 'POST':
-        post = Reg()
-        post.usr_name = request.POST.get('uname')
-        post.pwd = request.POST.get('pwd')
-        if auth.authenticate(usr_name='uname', pwd='pwd'):
-            pass
-    else:
-        pass"""
+def out(request):
+    auth.logout(request)
+    return redirect('home')

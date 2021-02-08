@@ -4,9 +4,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>User-Login</title>
+        <title>User Authentication</title>
     </head>
-    <body id="body_login">
+    <body>
         <center>
         <br>
         <br>
@@ -15,13 +15,15 @@
                 {% csrf_token %}
                 <fieldset id="fieldset02">
                     <label><b>User Name </b></label>
-                        <input id="in 01" type="text" placeholder="enter username ex.'joy@12'" name="uname" required><br><br>
+                        <input id="in 01" type="text" placeholder="" name="un" required><br><br>
                     <label><b>Password </b></label>
-                        <input id="in 02" type="text" placeholder="enter password" name="pwd" required><br><br>
-                    <label><b>Email-ID  </b></label>
-                        <input id="in 03" type="email" placeholder="Enter your mail id" name="mail" required><br><br>
-                    <button class="button b4" value="post" type="submit">Login</button>
+                        <input id="in 02" type="password" placeholder="" name="pd" required><br><br>
+                    <button class="button b4" type="submit">Login</button>
+                    {% for message in messages %}
+                    <center><p>{{message}}</p></center>
+                    {% endfor %}
                 </fieldset>
+
             </form>
         </div>
         </center>
