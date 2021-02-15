@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-{% if user.is_authenticated %}
+{% if user.is_superuser %}
     <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">

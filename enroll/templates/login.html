@@ -4,7 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>User Authentication</title>
+        <title>Authentication</title>
     </head>
     <body>
         <center>
@@ -14,18 +14,22 @@
             <form method="POST" autocomplete="off">
                 {% csrf_token %}
                 <fieldset id="fieldset02">
-                    <label><b>User Name </b></label>
-                        <input id="in 01" type="text" placeholder="" name="un" required><br><br>
-                    <label><b>Password </b></label>
-                        <input id="in 02" type="password" placeholder="" name="pd" required><br><br>
+                    <div class="block">
+                        <label><b>User Name </b></label>
+                            <input type="text" id="in01" name="un" required><br><br>
+                    </div>
+                    <div class="block">
+                        <label><b>Password </b></label>
+                            <input type="password" id="in01" name="pd" required><br><br>
+                    </div>
                     <button class="button b4" type="submit">Login</button>
-                    {% for message in messages %}
-                    <center><p>{{message}}</p></center>
-                    {% endfor %}
-                </fieldset>
 
+                </fieldset>
             </form>
         </div>
+              {% for message in messages %}
+                    <center><p>{{message}}</p></center>
+            {% endfor %}
         </center>
     </body>
 </html>

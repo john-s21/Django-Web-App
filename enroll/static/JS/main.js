@@ -1,7 +1,7 @@
-//function con()
-//    {
-//        alert("button testing");
-//    }
+function con()
+    {
+        alert("button testing");
+    }
 
 function conf()
 {

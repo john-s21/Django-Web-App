@@ -66,7 +66,7 @@ def log(request):
             print("----LOGIN SUCCESS----")
             return redirect('home')
         else:
-            messages.info(request, "Invalid Credentials!!")
+            messages.info(request, "Invalid Credentials")
             return redirect('login')
     else:
         return render(request, 'login.html')

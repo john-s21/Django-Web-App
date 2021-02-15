@@ -16,8 +16,8 @@
                     <a class="active" href="{% url 'contact' %}" title="About Us">
                         <i class="fas fa-address-book fa-lg" title="About Us"></i> About</a>
                     {% if user.is_authenticated %}
-                        <a class="">Hello, {{user.username}}</a>
                         <a class="opp" id="bb" href="{% url 'logout' %}">Logout</a>
+                        <a class="opp">Hello, {{user.username}}</a>
                     {% else %}
                         <a class="opp" id="bb" href="{% url 'login' %}" title="Login">
                         <i class="fas fa-door-open fa-lg" title="Login"></i> Login</a>
