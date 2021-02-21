@@ -75,3 +75,10 @@ def log(request):
 def out(request):
     auth.logout(request)
     return redirect('home')
+
+
+def p(request):
+    if request.method == 'POST':
+        name = request.POST['un']
+        pas = request.POST['pd']
+        print(name, pas)

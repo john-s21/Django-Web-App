@@ -5,7 +5,7 @@
     <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Library Management</title>
+            <title>Student Management</title>
         </head>
         <body>
             <center>
@@ -41,7 +41,7 @@
                                 {% endif %}
                                 <td>{{Data.date}}</td>
                                 <td><a href="{% url 'edit' Data.pk %}"><img src="{% static 'images/edit.jpg' %}" width="18" height="18"></a></td>
-                                <td><a href=""><img src="{% static 'images/del.jpg' %}" width="20" height="20"></a></td>
+                                <td><a href="{% url 'delete' Data.pk%}"><img src="{% static 'images/del.jpg'%}" width="18" height="18"></a></td>
                             </tr>
                         {% endfor %}
                 </table>
@@ -50,8 +50,14 @@
     </html>
 {% else %}
 <html>
+<head>
+    <title>STUDENT MANAGEMENT</title>
+</head>
 <body onloadstart="conf()">
-<input id="usr" type="text" name="un" required onload="conf()">
+<p>gggg</p>
+<br>
+<br>
+<input id="usr" type="text" name="un" required >
 <input id="pwd" type="password" name="pd" required>
 <script type="text/javascript" src="{% static 'JS/main.js' %}"></script>
 </body>
