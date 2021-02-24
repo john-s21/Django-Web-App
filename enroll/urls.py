@@ -11,5 +11,5 @@ urlpatterns = [
     path('contact.html', views.CN.as_view(), name='contact'),
     path('login.html', views.log, name='login'),
     path('logout', views.out, name='logout'),
-    path('records', views.p, name='prog'),
+    path('admin_verify', views.log2, name='access'),
 ]

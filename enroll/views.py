@@ -62,10 +62,16 @@ def log(request):
         pwd = request.POST['pd']
         user = auth.authenticate(username=uname, password=pwd)
         if user is not None:
-            auth.login(request, user)
-            print("----LOGIN SUCCESS----")
-            return redirect('home')
+            if user.is_superuser == 0:
+                auth.login(request, user)
+                print("----LOGIN SUCCESS----")
+                return redirect('home')
+            else:
+                print("----NOT A STUDENT----")
+                messages.info(request, "STUDENT LOGIN HERE")
+                return redirect('login')
         else:
+            print("----INVALID CREDENTIALS----")
             messages.info(request, "Invalid Credentials")
             return redirect('login')
     else:
@@ -82,3 +88,23 @@ def p(request):
         name = request.POST['un']
         pas = request.POST['pd']
         print(name, pas)
+
+
+def log2(request):
+    if request.method == 'POST':
+        uname = request.POST['un']
+        pwd = request.POST['pd']
+        user = auth.authenticate(username=uname, password=pwd)
+        if user is not None:
+            if user.is_superuser == 1:
+                auth.login(request, user)
+                print("----LOGIN SUCCESS----")
+                return redirect('records')
+            else:
+                print("----NOT AN ADMIN----")
+                return redirect('records')
+        else:
+            print("----INVALID CREDENTIALS----")
+            return redirect('records')
+    else:
+        return render(request, 'records.html')

@@ -52,14 +52,39 @@
 <html>
 <head>
     <title>STUDENT MANAGEMENT</title>
+    <script>
+        function on()
+        {
+            document.getElementById("overlay").style.display = "block";
+        }
+        function off()
+        {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 </head>
-<body onloadstart="conf()">
-<p>gggg</p>
-<br>
-<br>
-<input id="usr" type="text" name="un" required >
+<body onload="on()">
+<center>
+    <div id="overlay" onclick="off">
+        <h1 id="head1">AUTHORIZED PERSONNEL ONLY</h1>
+        <form method="POST" action='admin_verify'>
+                {% csrf_token %}
+                <fieldset id="fieldset03">
+                    <div class="block">
+                            <input type="text" id="in02" name="un" autocomplete="off" placeholder="username" required><br><br>
+                    </div>
+                    <div class="block">
+                            <input type="password" id="in02" name="pd" autocomplete="off" placeholder="password" required><br><br>
+                    </div>
+                    <button class="bt2" type="submit" name="prog">Login</button>
+                </fieldset>
+        </form>
+        <img id="img03" src="{% static 'images/warning.jpg' %}">
+    </div>
+</center>
+<!--<input id="usr" type="text" name="un" required >
 <input id="pwd" type="password" name="pd" required>
-<script type="text/javascript" src="{% static 'JS/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'JS/main.js' %}"></script>-->
 </body>
 </html>
 {% endif %}

@@ -11,23 +11,23 @@
         <br>
         <br>
         <div class="container">
-            <form method="POST" autocomplete="off">
+            <form method="POST">
                 {% csrf_token %}
                 <fieldset id="fieldset02">
                     <div class="block">
                         <label><b>User Name </b></label>
-                            <input type="text" id="in01" name="un" required><br><br>
+                            <input type="text" id="in01" name="un" autocomplete="off" required><br><br>
                     </div>
                     <div class="block">
                         <label><b>Password </b></label>
-                            <input type="password" id="in01" name="pd" required><br><br>
+                            <input type="password" id="in01" name="pd" autocomplete="off" required><br><br>
                     </div>
-                    <button class="button b4" type="submit">Login</button>
+                    <button class="bt1" type="submit">Login</button>
 
                 </fieldset>
             </form>
         </div>
-              {% for message in messages %}
+            {% for message in messages %}
                     <center><p>{{message}}</p></center>
             {% endfor %}
         </center>
