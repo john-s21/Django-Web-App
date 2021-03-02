@@ -1,13 +1,17 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% if user.is_superuser %}
-    <html>
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Student Management</title>
-        </head>
-        <body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Python-Django Project">
+        <meta name="keywords" content="bijujohn.pythonanywhere.com">
+        <meta name="author" content="John Paul">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Management</title>
+    </head>
+    <body onload="on()">
+        {% if user.is_superuser %}
             <center>
                 <br>
                 <br>
@@ -41,52 +45,38 @@
                                 {% endif %}
                                 <td>{{Data.date}}</td>
                                 <td><a href="{% url 'edit' Data.pk %}"><img src="{% static 'images/edit.jpg' %}" width="18" height="18"></a></td>
-                                <td><a href="{% url 'delete' Data.pk%}"><img src="{% static 'images/del.jpg'%}" width="18" height="18"></a></td>
+                                <td><a href="{% url 'delete' Data.pk %}"><img src="{% static 'images/del.jpg '%}" width="18" height="18"></a></td>
                             </tr>
                         {% endfor %}
                 </table>
             </center>
-        </body>
-    </html>
-{% else %}
-<html>
-<head>
-    <title>STUDENT MANAGEMENT</title>
-    <script>
-        function on()
-        {
-            document.getElementById("overlay").style.display = "block";
-        }
-        function off()
-        {
-            document.getElementById("overlay").style.display = "none";
-        }
-    </script>
-</head>
-<body onload="on()">
-<center>
-    <div id="overlay" onclick="off">
-        <h1 id="head1">AUTHORIZED PERSONNEL ONLY</h1>
-        <form method="POST" action='admin_verify'>
-                {% csrf_token %}
-                <fieldset id="fieldset03">
-                    <div class="block">
+        {% else %}
+            <script>
+                function on(){document.getElementById("overlay").style.display = "block";}
+            </script>
+            <center>
+            <div id="overlay">
+                <h1 id="head1">AUTHORIZED PERSONNEL ONLY</h1>
+                <form method="POST" action='admin_verify'>
+                    {% csrf_token %}
+                    <fieldset id="fieldset03">
+                        <div class="block">
                             <input type="text" id="in02" name="un" autocomplete="off" placeholder="username" required><br><br>
-                    </div>
-                    <div class="block">
+                        </div>
+                        <div class="block">
                             <input type="password" id="in02" name="pd" autocomplete="off" placeholder="password" required><br><br>
-                    </div>
-                    <button class="bt2" type="submit" name="prog">Login</button>
-                </fieldset>
-        </form>
-        <img id="img03" src="{% static 'images/warning.jpg' %}">
-    </div>
-</center>
+                        </div>
+                        <button class="bt2" type="submit" name="prog">Login</button>
+                    </fieldset>
+                </form>
+                <img id="img03" src="{% static 'images/warning.jpg' %}">
+            </div>
+            </center>
+        {% endif %}
 <!--<input id="usr" type="text" name="un" required >
 <input id="pwd" type="password" name="pd" required>
 <script type="text/javascript" src="{% static 'JS/main.js' %}"></script>-->
-</body>
+    </body>
 </html>
-{% endif %}
 {% endblock content %}
 

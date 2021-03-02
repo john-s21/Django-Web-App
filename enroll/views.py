@@ -9,7 +9,7 @@ from django.shortcuts import render, redirect
 
 class H(TemplateView):
     model = Data
-    template_name = 'home.html'
+    template_name = 'index.html'
 
 
 class N(CreateView):
@@ -56,7 +56,7 @@ class CN(TemplateView):
 #         return render(request, 'login.html')
 
 
-def log(request):
+def student_login(request):
     if request.method == 'POST':
         uname = request.POST['un']
         pwd = request.POST['pd']
@@ -64,7 +64,7 @@ def log(request):
         if user is not None:
             if user.is_superuser == 0:
                 auth.login(request, user)
-                print("----LOGIN SUCCESS----")
+                print("----LOGIN SUCCESS|STUDENT----")
                 return redirect('home')
             else:
                 print("----NOT A STUDENT----")
@@ -90,7 +90,7 @@ def p(request):
         print(name, pas)
 
 
-def log2(request):
+def admin_login(request):
     if request.method == 'POST':
         uname = request.POST['un']
         pwd = request.POST['pd']
@@ -98,7 +98,7 @@ def log2(request):
         if user is not None:
             if user.is_superuser == 1:
                 auth.login(request, user)
-                print("----LOGIN SUCCESS----")
+                print("----LOGIN SUCCESS|ADMIN----")
                 return redirect('records')
             else:
                 print("----NOT AN ADMIN----")
@@ -108,3 +108,7 @@ def log2(request):
             return redirect('records')
     else:
         return render(request, 'records.html')
+
+
+def course(request):
+    return render(request, 'courses.html')

@@ -1,20 +1,30 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content%}
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Update Form</title>
-        </head>
-        <body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Python-Django Project">
+        <meta name="keywords" content="bijujohn.pythonanywhere.com">
+        <meta name="author" content="John Paul">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update Form</title>
+    </head>
+    <body onload="redirect()">
+        {% if user.is_superuser%}
             <center>
                 <h2><u>Update Form:</u></h2>
-                    <form method="post">
-                        {% csrf_token %}
-                        {{form.as_p}}
-                        <input type="submit" value="Update">
-                    </form>
+                <form method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Update">
+                </form>
             </center>
-        </body>
-    </html>
+        {% else %}
+            <script>
+                function redirect(){alert("Not an Admin--Redirecting....");window.location.replace('{% url 'home' %}');}
+            </script>
+        {% endif %}
+    </body>
+</html>
 {% endblock content%}

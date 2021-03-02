@@ -1,12 +1,17 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 <html lang="en">
    <head>
-         <meta charset="UTF-8">
-          <title>Delete Page</title>
+       <meta charset="UTF-8">
+       <meta name="description" content="Python-Django Project">
+       <meta name="keywords" content="bijujohn.pythonanywhere.com">
+       <meta name="author" content="John Paul">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Delete Page</title>
    </head>
-        <body>
+   <body onload="redirect()">
+        {% if user.is_superuser %}
             <center>
                 <br>
                 <br>
@@ -18,6 +23,11 @@
                             <input type="button" value="no" onclick="window.location.href='{% url 'records' %}'">
                     </form>
             </center>
-        </body>
+        {% else %}
+            <script>
+                function redirect(){alert("Not an Admin--Redirecting....");window.location.replace('{% url 'home' %}');}
+            </script>
+        {% endif %}
+   </body>
 </html>
 {% endblock content%}
