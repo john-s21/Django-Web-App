@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d91b19c-ae74-4c1d-a334-ea277a2e338c" name="Default Changelist" comment="login form layout added from w3school">
-      <change afterPath="$PROJECT_DIR$/enroll/static/extras/c++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enroll/static/extras/c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enroll/static/extras/java.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enroll/static/extras/python.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enroll/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enroll/templates/courses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enroll/static/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/static/CSS/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/templates/records.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/records.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/templates/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/courses.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/enroll/templates/registration/come.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/enroll/templates/registration/come.html" />
   </component>
   <component name="RecentsManager">
