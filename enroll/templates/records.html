@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Student Management</title>
     </head>
-    <body onload="on()" id="rcd-pg">
+    <body onload="on()">
         {% if user.is_superuser %}
             <center>
                 <br>
@@ -73,9 +73,6 @@
             </div>
             </center>
         {% endif %}
-<!--<input id="usr" type="text" name="un" required >
-<input id="pwd" type="password" name="pd" required>
-<script type="text/javascript" src="{% static 'JS/main.js' %}"></script>-->
     </body>
 </html>
 {% endblock content %}

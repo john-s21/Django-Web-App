@@ -37,7 +37,6 @@ table{
         width: 45%;
         z-index: -1;
 }
-#rcd-pg{overflow-x: hidden;}
 
 #overlay {
   position: fixed;
@@ -106,14 +105,14 @@ table{
             margin-top: -12px;
             margin-right: -8px;
             background-color: #333;
-            width: 101.5%;
+            width: 101.2%;
             height: 7%
 }
 
 .topnav a {
             float: left;
             color: #f2f2f2;
-            padding: 16px 38px;
+            padding: 16px 30px;
             text-decoration: none;
             font-size: 17px;
             transition-duration: 0.9s;
@@ -239,7 +238,7 @@ button {
 .bt2 {
             border-radius: 5px;
             position: relative;
-            left: 36%;
+            left: 34%;
             width: 24%;
             height: 15%;
 }
@@ -265,12 +264,12 @@ button {
 .grid-container5{position: relative; width: 105%;}
 .grid-container6{position: relative; width: 105%;}
 
-.ig1 {display: block; width: 105%; height: 60%; margin-left: -1%;}
-.ig2 {display: block; width: 105%; height: 59%; margin-left: -1%;}
-.ig3 {display: block; width: 105%; height: 60%; margin-left: -1%;}
-.ig4 {display: block; width: 105%; height: 59%; margin-left: -1%;}
-.ig5 {display: block; width: 105%; height: 60%; margin-left: -1%;}
-.ig6 {display: block; width: 105%; height: 60%; margin-left: -1%;}
+.ig1 {display: block; width: 105%; height: 80%; margin-left: -1%;}
+.ig2 {display: block; width: 105%; height: 79%; margin-left: -1%;}
+.ig3 {display: block; width: 105%; height: 80%; margin-left: -1%;}
+.ig4 {display: block; width: 105%; height: 79%; margin-left: -1%;}
+.ig5 {display: block; width: 105%; height: 80%; margin-left: -1%;}
+.ig6 {display: block; width: 105%; height: 80%; margin-left: -1%;}
 
 .overlay1{
          position: absolute;
@@ -350,3 +349,9 @@ button {
 .text4{color: white; font-size: 20px; position: absolute; top: 50%; left: 47%; transform: translate(-50%, -50%); text-align: center;}
 .text5{color: white; font-size: 20px; position: absolute; top: 50%; left: 47%; transform: translate(-50%, -50%); text-align: center;}
 .text6{color: white; font-size: 20px; position: absolute; top: 50%; left: 47%; transform: translate(-50%, -50%); text-align: center;}
+
+
+
+#myBtn:hover {
+  background-color: white;
+}
