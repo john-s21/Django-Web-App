@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d91b19c-ae74-4c1d-a334-ea277a2e338c" name="Default Changelist" comment="login form layout added from w3school">
+      <change afterPath="$PROJECT_DIR$/enroll/static/course/c++.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enroll/static/course/c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enroll/static/course/dotnet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enroll/static/course/java.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enroll/static/course/php.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enroll/static/course/python.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mgmt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mgmt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/static/CSS/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/static/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/static/CSS/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/static/extras/c++.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/static/extras/c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/static/extras/java.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/static/extras/python.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/templates/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/templates/records.html" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/templates/records.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyvenv.cfg" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/enroll/templates/registration/come.html" />
   </component>
   <component name="RecentsManager">
