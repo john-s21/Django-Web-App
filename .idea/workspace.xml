@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d91b19c-ae74-4c1d-a334-ea277a2e338c" name="Default Changelist" comment="login form layout added from w3school">
-      <change afterPath="$PROJECT_DIR$/requirements2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/migrations/0002_reg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/migrations/0003_auto_20210120_1357.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/migrations/0004_auto_20210208_1311.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enroll/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/enroll/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyvenv.cfg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/enroll/templates/registration/come.html" />
   </component>
   <component name="RecentsManager">

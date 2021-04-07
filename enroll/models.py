@@ -29,7 +29,7 @@ class Data(models.Model):
         )),
     )
 
-    id = models.AutoField(auto_created=True, primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=15, null=False, unique=True)
     course = models.CharField(max_length=10, blank=False, null=False, choices=COURSE)
     session = models.CharField(max_length=8, blank=False, null=False, choices=DAY)
@@ -46,7 +46,7 @@ class Data(models.Model):
 
 
 class Reg(models.Model):
-    id = models.AutoField(auto_created=True, primary_key=True)
+    id = models.AutoField(primary_key=True)
     usr_name = models.CharField(max_length=15, unique=True, null=False, blank=False)
     pwd = models.CharField(max_length=15, null=False, blank=False, unique=True)
     mail = models.EmailField(unique=True, null=False, blank=False)
