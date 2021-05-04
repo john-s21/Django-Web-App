@@ -13,14 +13,14 @@
         <body class="cover">    
             <center>
             <br>
-                    <form method="post">
+                    <form method="post" action="new_registration">
                         {% csrf_token %}
                         <fieldset class="field01">
                             <legend align="center">
                                 <label><b>REGISTER</b></label>
                             </legend>
                                 {{form.as_p}}
-                                <button class="button b1" type="submit" name="i1" onclick="con()">TEST</button>
+                                <button class="button b1" type="submit" name="i1" onclick="con()">Register</button>
                         </fieldset>
                     </form>
             </center>

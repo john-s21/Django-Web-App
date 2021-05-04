@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course</title>
 </head>
 <body id="cbdy">
@@ -73,7 +75,7 @@
         </div>
         <img class="ig5" src="{% static 'course/dotnet.jpg' %}">
     </div>
-    <button onclick="tp()" id="tpbtn" title="Go to top">Scroll to top</button>
+    <button onclick="tp()" id="tpbtn">TOP</button>
     <script type="text/javascript" src="{% static 'JS/main.js' %}"></script>
 </body>
 </html>

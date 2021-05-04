@@ -1,12 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Python-Django Project">
-        <meta name="keywords" content="bijujohn.pythonanywhere.com">
-        <meta name="author" content="John Paul">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Authentication</title>
     </head>
@@ -32,7 +29,12 @@
             </form>
         </div>
             {% for message in messages %}
-                    <center><p>{{message}}</p></center>
+                    <center>
+                        <div class="alert">
+                            <span class="msg" onclick="this.parentElement.style.display='none';">&times</span>
+                            <strong>{{message}}</strong>
+                        </div>
+                    </center>
             {% endfor %}
         </center>
     </body>

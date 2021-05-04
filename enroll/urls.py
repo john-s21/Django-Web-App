@@ -4,7 +4,7 @@ from .import views as v
 
 urlpatterns = [
     path('', v.H.as_view(), name='home'),
-    path('registration', v.N.as_view(), name='new'),
+    # path('new_registration', v.N.as_view(), name='new'),
     path('records', v.R.as_view(), name='records'),
     path('update/<int:pk>', v.U.as_view(), name='edit'),
     path('delete/<int:pk>', v.D.as_view(), name='delete'),
@@ -13,4 +13,5 @@ urlpatterns = [
     path('logout', v.out, name='logout'),
     path('admin_verify', v.admin_login, name='access'),
     path('course', v.course, name='course'),
+    path('search', v.search_box, name='find'),
 ]

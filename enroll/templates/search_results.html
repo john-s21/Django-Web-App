@@ -12,7 +12,7 @@
             <center>
                 <br>
                 <br>
-                <h2>---Student Database---</h2>
+                <h2>---Student Database---</h2> <p>{{count}}</p>
                 <table cellpadding="14px" cellspacing="2" border="2">
                     <thead>
                     <tr>
@@ -27,25 +27,25 @@
                     </tr>
                     </thead>
                     <tbody>
-                        {% for Data in object_list %}
+                        {% for results in detail %}
                             <tr>
-                                <td>{{Data.id}}</td>
-                                <td>{{Data.name}}</td>
-                                <td>{{Data.course}}</td>
-                                {% if Data.amount < 15000 %}
-                                    <td bgcolor="red">{{Data.amount}}</td>
+                                <td>{{results.id}}</td>
+                                <td>{{results.name}}</td>
+                                <td>{{results.course}}</td>
+                                {% if results.amount < 15000 %}
+                                    <td bgcolor="red">{{results.amount}}</td>
                                 {% else %}
-                                    <td>{{Data.amount}}</td>
+                                    <td>{{results.amount}}</td>
                                 {% endif %}
-                                <td>{{Data.session}}</td>
-                                {% if 'N' in Data.attendance %}
-                                    <td bgcolor="red">{{Data.attendance}}</td>
+                                <td>{{results.session}}</td>
+                                {% if 'N' in results.attendance %}
+                                    <td bgcolor="red">{{results.attendance}}</td>
                                 {% else %}
-                                    <td>{{Data.attendance}}</td>
+                                    <td>{{results.attendance}}</td>
                                 {% endif %}
-                                <td>{{Data.date}}</td>
-                                <td><a href="{% url 'edit' Data.pk %}"><img id="edit" src="{% static 'images/edit.jpg' %}" width="18" height="18"></a></td>
-                                <td><a href="{% url 'delete' Data.pk %}"><img id="delete" src="{% static 'images/del.jpg '%}" width="18" height="18"></a></td>
+                                <td>{{results.date}}</td>
+                                <td><a href="{% url 'edit' results.pk %}"><img id="edit" src="{% static 'images/edit.jpg' %}" width="18" height="18"></a></td>
+                                <td><a href="{% url 'delete' results.pk %}"><img id="delete" src="{% static 'images/del.jpg '%}" width="18" height="18"></a></td>
                             </tr>
                         {% endfor %}
                     </tbody>
@@ -64,8 +64,6 @@
             <input id="box4" type="text" name="q3" placeholder="attendance">
             <button id="b6" type="submit">SEARCH</button>
         </form>
-
-
         {% else %}
             <script>
                 function on(){document.getElementById("overlay").style.display = "block";}
@@ -92,4 +90,3 @@
     </body>
 </html>
 {% endblock content %}
-

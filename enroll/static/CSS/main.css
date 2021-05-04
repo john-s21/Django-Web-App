@@ -13,14 +13,31 @@ body {
         box-shadow: 0 0 0 0 red;
 }
 
-h1 {
-          color: black; text-align: center;
-}
+h1 {color: black; text-align: center; font-family: Optima;}
 
-table{
-        background-color: transparent;
+table, td, th {border: 1px solid black; text-align: center;}
+table {border-collapse: collapse; width: 65%;}
+th {padding: 10px; background-color: #4CAF50}
+td {padding: 20px;}
+thead {display: block;}
+tbody {display: block; overflow-y:scroll; height: 300px;}
+tbody::-webkit-scrollbar {overflow-y:scroll; display: none;}
+table tbody tr:hover {background-color: #333}
+#delete:hover {background-color: red}
+#edit:hover {background-color: red}
 
-}
+#b1 {position: absolute; left: 5%; top: 23%;}
+#b2 {position: absolute; left: 5%; top: 33%;}
+#b3 {position: absolute; left: 5%; top: 43%;}
+#b4 {position: absolute; left: 5%; top: 53%;}
+#b5 {position: absolute; left: 5%; top: 63%;}
+
+
+#box1 {position: absolute; right: 3%; top: 23%;}
+#box2 {position: absolute; right: 3%; top: 33%;}
+#box3 {position: absolute; right: 3%; top: 43%;}
+#box4 {position: absolute; right: 3%; top: 53%;}
+#b6 {position: absolute; right: 3%; top: 63%; background-color: black; color: white; border: none;}
 
 #head1 {
         position: absolute;
@@ -43,7 +60,7 @@ table{
   display: none;
   width: 100%;
   height: 100%;
-  top: 6.3%;
+  top: 7.2%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -88,7 +105,7 @@ table{
 
 
 .cover {
-             background: url('/static/images/reg.jpg');
+             background: url('/static/images/eg.jpg');
              background-repeat: no-repeat;
              background-size: cover;
              background-position: relative;
@@ -100,13 +117,13 @@ table{
 
 .topnav {
             position: sticky;
-            overflow: fixed;
+            overflow: hidden;
             margin-left: -10px;
             margin-top: -12px;
             margin-right: -8px;
-            background-color: #333;
-            width: 101.2%;
-            height: 7%
+            background-color: hsl(0, 100%, 0%);
+            width: 101.3%;
+            height: 8.01%
 }
 
 .topnav a {
@@ -153,13 +170,26 @@ table{
         height: 155px;
         width: 180px;
         border-color: transparent;
+        transition-duration: 0.9s;
         text-align: left;
 }
 
-#fieldset02:hover{
-            box-shadow: 0 0 12px 5px black;
-            transition-duration: 0.9s;
-}
+#fieldset02:hover{box-shadow: 0 0 12px 5px black;}
+
+.alert{padding: 10px; background-color: #333; color: white; width: 14%}
+
+.msg {
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+.msg:hover {color: red}
+
 button {
         color: black;
         cursor: pointer;
@@ -194,13 +224,15 @@ button {
         display: inline-block;
         width: 80px;
         text-align: left;
+        margin-left: 12px;
         position: relative;
         margin-top: -3%;
 }
 
 #in01 {
-        padding: 10 0 0 0;
+        padding: 15 5 0 0;
         border: none;
+        margin-left: 12px;
         border-bottom: 1px solid black;
         background-color: transparent;
 }
@@ -226,6 +258,7 @@ button {
 #in02 {
         padding: 10 0 0 0;
         border: none;
+        margin-left: 5px;
         border-bottom: 1px solid black;
         background-color: transparent;
 }
@@ -245,93 +278,93 @@ button {
 
 .bt2:hover{
         background-color: black;
-        color: white;
+        color: Yellow;
         box-shadow: 0 1px 8px 1.5px green;
 }
 
 .bt2:focus {
         background-color: black;
-        color: white;
+        color: Yellow;
         box-shadow: 0 1px 8px 1.5px green;
 }
 
 #cbdy::-webkit-scrollbar {display: none; overflow-y: scroll;}
 
-.grid-container1{position: relative; width :105%;}
+.grid-container1{position: relative; width :105%; background-color: pink;}
 .grid-container2{position: relative; width :105%;}
 .grid-container3{position: relative; width :105%;}
 .grid-container4{position: relative; width :105%;}
 .grid-container5{position: relative; width: 105%;}
 .grid-container6{position: relative; width: 105%;}
 
-.ig1 {display: block; width: 105%; height: 80%; margin-left: -1%;}
-.ig2 {display: block; width: 105%; height: 79%; margin-left: -1%;}
-.ig3 {display: block; width: 105%; height: 80%; margin-left: -1%;}
-.ig4 {display: block; width: 105%; height: 79%; margin-left: -1%;}
-.ig5 {display: block; width: 105%; height: 80%; margin-left: -1%;}
-.ig6 {display: block; width: 105%; height: 80%; margin-left: -1%;}
+.ig1 {display: block; width: 80%; height: 600%; margin-left: 8%; margin-top: 5%;}
+.ig2 {display: block; width: 80%; height: 60%; margin-left: 8%; margin-top: 5%;}
+.ig3 {display: block; width: 80%; height: 60%; margin-left: 8%; margin-top: 5%;}
+.ig4 {display: block; width: 80%; height: 63%; margin-left: 8%; margin-top: 5%;}
+.ig5 {display: block; width: 80%; height: 60%; margin-left: 8%; margin-top: 5%;}
+.ig6 {display: block; width: 80%; height: 60%; margin-left: 8%; margin-top: 5%;}
 
 .overlay1{
          position: absolute;
-         left: -0.8%;
-         right: 0;
+         left: 8%;
+         right: 0%;
          background-color: rgba(0,0,0,0.8);
          overflow: hidden;
-         width: 105%;
+         width: 80%;
          height: 0;
          transition: .8s ease;
 }
 
 .overlay2{
          position: absolute;
-         left: -0.8%;
+         left: 8%;
          right: 0;
          background-color: rgba(0,0,0,0.8);
          overflow: hidden;
-         width: 105%;
+         width: 80%;
          height: 0;
          transition: .8s ease;
 }
 .overlay3{
          position: absolute;
-         left: -0.8%;
+         left: 8%;
          right: 0;
          background-color: rgba(0,0,0,0.8);
          overflow: hidden;
-         width: 105%;
+         width: 80%;
          height: 0;
          transition: .8s ease;
 }
 
 .overlay4{
          position: absolute;
-         left: -0.8%;
+         left: 8%;
          right: 0;
          background-color: rgba(0,0,0,0.8);
          overflow: hidden;
-         width: 105%;
+         width: 80%;
          height: 0;
          transition: .8s ease;
 }
 
 .overlay5 {
         position: absolute;
-        left: -0.8%;
+        left: 8%;
         right: 0;
         background-color: rgba(0,0,0,0.8);
         overflow: hidden;
-        width: 105%;
+        width: 80%;
         height: 0;
         transition: .8s ease;
 }
 
 .overlay6 {
         position: absolute;
-        left: -0.8%;
+        left: 8%;
         right: 0;
         background-color: rgba(0,0,0,0.8);
         overflow: hidden;
-        width: 105%;
+        width: 80%;
         height: 0;
         transition: .8s ease;
 }
@@ -352,6 +385,16 @@ button {
 
 
 
-#myBtn:hover {
-  background-color: white;
-}
+/* goto top button */
+#tpbtn {background-color: black; color: white; position: sticky; bottom: 8%; left: 2%; padding: 5px 5px;}
+
+#foot{
+    bottom: 0;
+    color: white;
+    text-align: center;
+    background-color: hsl(0, 100%, 0%);
+    height: 2em;
+    left: 0;
+    position: fixed;
+    font-size: small;
+    width:100%;}

@@ -12,11 +12,11 @@ class H(TemplateView):
     template_name = 'index.html'
 
 
-class N(CreateView):
-    model = Data
-    template_name = 'new.html'
-    fields = ['name', 'course', 'session', 'attendance', 'date', 'amount']
-    success_url = reverse_lazy('home')
+# class N(CreateView):
+#     model = Data
+#     template_name = 'new.html'
+#     fields = ['name', 'course', 'session', 'attendance', 'date', 'amount']
+#     success_url = reverse_lazy('home')
 
 
 class R(ListView):
@@ -67,12 +67,12 @@ def student_login(request):
                 print("----LOGIN SUCCESS|STUDENT----")
                 return redirect('home')
             else:
-                print("----NOT A STUDENT----")
-                messages.info(request, "STUDENT LOGIN HERE")
+                print("----INVALID LOGIN DETECTED----")
+                messages.info(request, "STUDENT LOGIN ONLY")
                 return redirect('login')
         else:
             print("----INVALID CREDENTIALS----")
-            messages.info(request, "Invalid Credentials")
+            messages.error(request, "Invalid Credentials")
             return redirect('login')
     else:
         return render(request, 'login.html')
@@ -101,7 +101,7 @@ def admin_login(request):
                 print("----LOGIN SUCCESS|ADMIN----")
                 return redirect('records')
             else:
-                print("----NOT AN ADMIN----")
+                print("----UNAUTHORIZED LOGIN DETECTED----")
                 return redirect('records')
         else:
             print("----INVALID CREDENTIALS----")
@@ -112,3 +112,21 @@ def admin_login(request):
 
 def course(request):
     return render(request, 'courses.html')
+
+
+def search_box(request):
+    model = Data.objects.all()
+    q = request.GET.get('q')
+    q1 = request.GET.get('q1')
+    q2 = request.GET.get('q2')
+    q3 = request.GET.get('q3')
+    if (q, q1, q2, q3 != '') and (q, q1, q2, q3) is not None:
+        model = model.filter(name__icontains=q)
+        model = model.filter(course__iexact=q1)
+        model = model.filter(session__iexact=q2)
+        model = model.filter(attendance__iexact=q3)
+        context = {'detail': model}
+        count = model.count()
+        print(q)
+        return render(request, 'search_results.html', context)
+
