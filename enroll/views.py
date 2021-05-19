@@ -1,7 +1,7 @@
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.models import User, auth
-from . models import Data
+from .models import Data
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect
@@ -115,18 +115,16 @@ def course(request):
 
 
 def search_box(request):
-    model = Data.objects.all()
     q = request.GET.get('q')
     q1 = request.GET.get('q1')
     q2 = request.GET.get('q2')
     q3 = request.GET.get('q3')
-    if (q, q1, q2, q3 != '') and (q, q1, q2, q3) is not None:
-        model = model.filter(name__icontains=q)
-        model = model.filter(course__iexact=q1)
-        model = model.filter(session__iexact=q2)
-        model = model.filter(attendance__iexact=q3)
-        context = {'detail': model}
-        count = model.count()
-        print(q)
+    q4 = request.GET.get('q4')
+    q5 = request.GET.get('q5')
+    if (q, q1, q2, q3, q4, q5 != '') and (q, q1, q2, q3, q4, q5) is not None:
+        result = Data.objects.filter(name__icontains=q).filter(course__icontains=q1).filter(session__icontains=q2)\
+            .filter(attendance__icontains=q3).filter(amount__gte=q4, amount__lte=q5)
+        context = {'detail': result}
         return render(request, 'search_results.html', context)
-
+    else:
+        return render(request, 'records.html')

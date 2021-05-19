@@ -38,6 +38,9 @@ class Data(models.Model):
     amount = models.IntegerField(blank=False, null=False)
     img = models.ImageField(upload_to='images/', default="")
 
+    class Meta:
+        db_table = 'student'
+
     def __str__(self):
         return self.name
 
@@ -50,6 +53,9 @@ class Reg(models.Model):
     usr_name = models.CharField(max_length=15, unique=True, null=False, blank=False)
     pwd = models.CharField(max_length=15, null=False, blank=False, unique=True)
     mail = models.EmailField(unique=True, null=False, blank=False)
+
+    class Meta:
+        db_table = 'login'
 
     def __str__(self):
         return self.usr_name

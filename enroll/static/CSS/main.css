@@ -31,13 +31,16 @@ table tbody tr:hover {background-color: #333}
 #b3 {position: absolute; left: 5%; top: 43%;}
 #b4 {position: absolute; left: 5%; top: 53%;}
 #b5 {position: absolute; left: 5%; top: 63%;}
-
-
+#sml {position: absolute; right: 8.3%; top: 59%;}
+#hr1 {position: absolute; right: 3%; top: 60%; width: 12.8%; border-top: 1px solid black;}
 #box1 {position: absolute; right: 3%; top: 23%;}
 #box2 {position: absolute; right: 3%; top: 33%;}
 #box3 {position: absolute; right: 3%; top: 43%;}
 #box4 {position: absolute; right: 3%; top: 53%;}
-#b6 {position: absolute; right: 3%; top: 63%; background-color: black; color: white; border: none;}
+#box5 {position: absolute; right: 11.4%; top:63%; width: 4%;}
+#box6 {position: absolute; right: 3%; top: 63%; width: 4%;}
+#b6 {position: absolute; right: 3%; top: 74%; background-color: black; color: white; border: none;}
+#b7 {position: absolute; right: 11.6%; top: 74%; background-color: black; color: white; border: none;}
 
 #head1 {
         position: absolute;
